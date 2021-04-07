@@ -41,3 +41,54 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+const newEmployees = [];
+
+function makeEmployees (name, bonusPercentage, totalCompensation, totalBonus){
+  let employee = {
+    name: name,
+    bonusPercentage,
+    totalCompensation,
+    totalBonus,
+  }
+  newEmployees.push(employee);
+  return newEmployees;
+}
+makeEmployees('Atticus', 0, 0, 0);
+makeEmployees('Jem', 0, 0, 0);
+makeEmployees('Scout', 0, 0, 0);
+makeEmployees('Robert', 0, 0, 0);
+makeEmployees('Mayella', 0, 0, 0);
+console.log(newEmployees);
+
+function updateBonus (array, array2) {
+  for (let i = 0, j = 0; i < array.length, j < array2.length; i++, j++) {
+    if (array2[j].reviewRating <= 2) {
+      array[i].bonusPercentage = 0;
+    }
+    else if (array2[j].reviewRating === 3){
+      array[i].bonusPercentage = 4;
+    }
+    else if (array2[j].reviewRating === 4){
+      array[i].bonusPercentage = 6;
+    }
+    else if(array2[j].reviewRating === 5){
+      array[i].bonusPercentage = 10;
+    }
+  }
+
+  return array;
+}
+console.log(updateBonus(newEmployees, employees));
+console.log(newEmployees);
+
+// function addBonus(array){
+//   let bonusPercentage = 0;
+//   for (let i = 0; i < array.length; i++){
+  
+
+//   }
+//   return array;
+// }
+// addBonus(employees);
+// console.log(employees);
