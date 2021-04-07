@@ -117,10 +117,7 @@ console.log(newEmployees);
 function calculateBonus (array, array2){
   //another set of 2 loops running at the same time to loop through both arrays 
   for (let i = 0, j = 0; i < array.length, j < array2.length; i++, j++){
-
-    //Converts the annual salary in the original array from a string to a number
-    array2[j].annualSalary = Number(array2[j].annualSalary);
-    
+    //!! I removed the extra line to convert the annualSalary to a number in the original array since it was already updated in the above function.
     //Converts the bonusPercentage in the new array to an actual percent by dividing by 100
     array[i].bonusPercentage = array[i].bonusPercentage / 100;
     
