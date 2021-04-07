@@ -41,8 +41,8 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
-//Comments also marked with !! were features done by myself. Otherwise comments without them are changes Eyram and I both made collaboratively 
 
+//Comments also marked with !! were features done by myself. Otherwise comments without them are changes Eyram and I both made collaboratively 
 
 //Created new array for the new employee objects 
 const newEmployees = [];
@@ -70,7 +70,7 @@ console.log(newEmployees);
 //Function to loop through the newEmployees array and the employees array at the same time and "communicate" between them
 function updateBonus (array, array2) {
   //for loop to work through both array at the same time
-  //!! Initally, we had 3 sets of 2 for loops to prevent any issues with the if/else if statements. I changed the program to do all the blocks of if/else if statements in the same set of for loops, cutting out the other two entirely. Looks better but has the same result.
+  //!! Initally, we had 3 sets of 2 for loops each to prevent any issues with the if/else if statements. I changed the program to do all the blocks of if/else if statements in the same set of for loops, cutting out the other two entirely. Looks better but has the same result.
   for (let i = 0, j = 0; i < array.length, j < array2.length; i++, j++) {
     //converts the annualSalary in each employee object of the employees array from a string to a number and updates the value of that annualSalary variable to the new number
     array2[j].annualSalary = Number(array2[j].annualSalary);
